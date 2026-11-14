@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-serif: 'DM Serif Display', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .font-brand {
+    font-family: var(--font-sans);
+    letter-spacing: -0.03em;
+  }
+
+  .font-numeric {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.45);
+}
+
+/* Print Stylesheet for High-Quality PDF / Paper export */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #1c1917 !important;
+  }
+  .no-print, nav, footer, button, .pwa-install-banner, .bottom-nav {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+  .card, .print-card {
+    border: 1px solid #e7e5e4 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+}

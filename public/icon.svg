@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="porotoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="beanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="50%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#ea580c" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Canvas squircle -->
+  <rect width="512" height="512" rx="144" fill="url(#porotoBg)"/>
+  <rect x="6" y="6" width="500" height="500" rx="138" fill="none" stroke="#292524" stroke-width="2"/>
+  
+  <!-- Modern Minimalist Organic Bean (Poroto) -->
+  <g filter="url(#softShadow)" transform="translate(256, 230)">
+    <!-- Main Poroto bean shape -->
+    <path d="M 0 -105 
+             C 65 -105, 115 -55, 115 15 
+             C 115 80, 70 125, 15 125 
+             C -25 125, -60 100, -75 70 
+             C -90 40, -85 0, -65 -35 
+             C -45 -70, -25 -105, 0 -105 Z" 
+          fill="url(#beanGradient)" />
+    
+    <!-- Inner soft highlight rim -->
+    <path d="M -5 -90 
+             C 45 -90, 95 -45, 95 15 
+             C 95 65, 55 105, 15 105" 
+          fill="none" 
+          stroke="url(#innerGlow)" 
+          stroke-width="10" 
+          stroke-linecap="round" />
+          
+    <!-- Bean Hilum / Eye (El ojo del poroto, sutil y fino) -->
+    <path d="M -50 -10 C -45 5, -45 25, -55 40" 
+          fill="none" 
+          stroke="#fff7ed" 
+          stroke-width="8" 
+          stroke-linecap="round" 
+          opacity="0.9" />
+  </g>
+  
+  <!-- Three floating counting dots (simbolizando los porotos de la contabilidad criolla) -->
+  <circle cx="165" cy="380" r="8" fill="#fdba74" opacity="0.6"/>
+  <circle cx="256" cy="380" r="10" fill="#fb923c"/>
+  <circle cx="347" cy="380" r="8" fill="#fdba74" opacity="0.6"/>
+
+  <!-- Clean, modern editorial typography -->
+  <text x="256" y="440" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="8" fill="#fafaf9" text-anchor="middle">POROTO</text>
+  <text x="256" y="468" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" letter-spacing="4" fill="#a8a29e" text-anchor="middle">GESTIÓN &amp; COCINA</text>
+</svg>

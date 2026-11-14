@@ -1,0 +1,6 @@
+{
+  "name": "POROTO — Gestión Culinaria & Finanzas",
+  "description": "Gestión financiera inteligente inspirada en la tradición del poroto, con registro por voz, Mercado Pago QR en tiempo real, recetario con Gemini AI y reportes de rentabilidad para gastronomía.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
